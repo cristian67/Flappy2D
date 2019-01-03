@@ -46,6 +46,7 @@ public class GameController : MonoBehaviour
         if (gameOver) { return; }
         score++;
         scoreText.text = "Score: " + score;
+        SoundSystem.instance.PlayCoin();
     }
 
     public void BirdDie()

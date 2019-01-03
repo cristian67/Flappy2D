@@ -26,7 +26,7 @@ public class RepetBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.LogWarning(groundHorizontalLenght);
+        //Debug.LogWarning(groundHorizontalLenght);
 
         if (transform.position.x < -(groundHorizontalLenght)) {
             RepositionBackground();

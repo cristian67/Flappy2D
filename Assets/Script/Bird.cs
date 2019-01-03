@@ -41,12 +41,15 @@ public class Bird : MonoBehaviour
                 rb2d.velocity = Vector2.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
                 anim.SetTrigger("Flap");
-            }  
+                SoundSystem.instance.PlayFly();
+
+            }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isDead = true;
+        SoundSystem.instance.PlayDie();
         GameController.instance.BirdDie();
     }
 
